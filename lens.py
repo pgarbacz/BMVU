@@ -13,7 +13,7 @@ class LensUtil:
     def FOVfromAngleD(self, _angFOV, _WD):
         hang = float(_angFOV)/2
         fWD = float(_WD)
-        hFOV = abs(math.tan(hang)*fWD)
+        hFOV = abs(math.tan(math.radians(hang))*fWD)
         FOV = 2*hFOV
         return FOV
 
